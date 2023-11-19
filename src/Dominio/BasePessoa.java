@@ -1,0 +1,27 @@
+package Dominio;
+
+import java.time.LocalDate;
+
+public abstract class BasePessoa extends BaseDadosComuns implements IImpressao {
+    protected String endereco;
+    protected String telefone;
+    
+    public String getEndereco(){
+        return endereco;
+    }
+    public void setEndereco(String endereco){
+        this.endereco = endereco;
+    }
+
+    public String getTelefone(){
+        return telefone;
+    }
+    public void setTelefone(String telefone){
+        this.telefone = telefone;
+    }
+    public BasePessoa(int codigo, String endereco, String telefone, LocalDate dataInsercao){
+        super(codigo, dataInsercao);
+        this.endereco = endereco;
+        this.telefone = telefone;
+    }
+    }
